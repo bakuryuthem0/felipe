@@ -11,7 +11,14 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/','HomeController@getIndex');
+Route::get('inicio','HomeController@getIndex');
+
+
+Route::get('biografia','HomeController@getBiografy');
+Route::get('servicios','HomeController@getServices');
+
+Route::get('terminos-y-condiciones','HomeController@getTerms');
+
+Route::get('cambiar-lenguaje/{lang}','HomeController@changeLang');
+Route::post('enviar-email','HomeController@postSendEmail');
